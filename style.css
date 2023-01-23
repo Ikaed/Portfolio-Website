@@ -1,0 +1,777 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*Återställning av HTML5 för äldre webbläsare*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/*För att få sidan att skrolla smidigare när man trycker menyvalen*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  background-color: #f5f5f5;
+}
+
+a,
+p,
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Avser länkarna i nav:et*/
+a {
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.leftfooter a {
+  color: #2c2c2c;
+  text-decoration: underline;
+}
+
+.border-heading {
+  width: 85px;
+  height: 4px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(25%, #666666),
+    color-stop(50%, #666666),
+    color-stop(50%, #2c2c2c),
+    to(#2c2c2c)
+  );
+  border-radius: 8px;
+}
+
+/*Footer social media*/
+/*Bootstrap användes för att få tag på sociala media-ikoner*/
+.btn-social-icon {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 44px;
+  font-size: 1.6em;
+  text-overflow: ellipsis;
+  height: 75px;
+  width: 75px;
+  padding: 0;
+  border-radius: 21.25rem;
+}
+
+.btn-social-icon > :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 72px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.rightfooter li {
+  display: grid;
+  margin: 20px;
+  float: right;
+}
+
+.leftfooter,
+.two-columns p {
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 3px;
+  color: #2c2c2c;
+}
+
+.leftfooter h2 {
+  color: #666666;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#portfolio {
+  color: #666666;
+  font-size: 35px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.portfolio-heading {
+  background-color: #fcfcfc;
+  padding: 50px 50px 0px 50px;
+}
+
+.leftfooter > .border-heading {
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+/*Sociala medie-knappar*/
+.fa:hover {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.fa-github {
+  background: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.fa-linkedin {
+  background: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  display: grid;
+}
+
+.text-column {
+  width: 100%;
+}
+
+/*Navigeringsfältet*/
+#topnav {
+  position: fixed;
+  transition: top 0.3s; /*Övergångseffekt när man skrollar neråt (och uppåt)*/
+  display: flex;
+  justify-content: space-between;
+  padding-right: 18px;
+  z-index: 5;
+  background: #f5f5f5;
+  width: 100%;
+  padding: 0px;
+  top: 0; /*Alltid vara på toppen av sidan*/
+  opacity: 90%;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 18px;
+  width: 100%;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+.menu__icon.mobile {
+  margin: 18px;
+  margin-right: 40px;
+  top: 0;
+}
+
+.socialmedia {
+  margin-left: 50px;
+}
+
+.leftnav {
+  display: flex;
+  max-width: 100%;
+  top: 15px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.rightnav {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+  padding-top: 8px;
+  margin-right: 40px;
+}
+
+.rightnav a {
+  color: #666666;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.rightnav a:hover {
+  transform: translateY(-5px);
+}
+
+/*Anpassad presentationsektion och footer*/
+.two-columns,
+#footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+  padding: 50px;
+}
+
+.two-columns {
+  margin-top: 50px;
+}
+
+.profilepic {
+  width: 300px;
+  height: auto;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+
+.bio {
+  padding-top: 94px;
+}
+
+/*Portföljobjekt*/
+.portfolio-items {
+  margin: auto;
+  display: grid;
+  padding: 50px;
+  width: 100%;
+  background-color: #fcfcfc;
+}
+
+.portfolio {
+  /*Position:relative krävs om man ska ha absolute över någon annan bild/div*/
+  position: relative;
+}
+
+.portfolio-img {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-text {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 4px;
+}
+
+.logo {
+  width: 26em;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.img-text .subtitle {
+  color: transparent;
+  font-weight: 600;
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-align: left;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Äldre versioner av Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.img-text:hover .subtitle {
+  font-weight: 600;
+  color: #fcfcfc;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Äldre versioner av Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+/*Ändrar ljusstyrkan på bakgrundsbilden*/
+.img-darken {
+  -webkit-transition: 1s;
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.profile-image-column {
+  text-align: center;
+}
+
+/*Kod för tillbaka upp-knappen från W3Schools: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp, förbättrad användarupplevelse*/
+#myBtn {
+  font-family: "Raleway", sans-serif;
+  display: none;
+  /*Fixerar uppåt-knappens position*/
+  position: fixed;
+  bottom: 50px; 
+  right: 20px; 
+
+  z-index: 99; /* Z-index gör så att den alltid kommer ligga överst, beroende på sifferantal */
+  border: none;
+  outline: none;
+  cursor: pointer; /*Lägger till en pekare så man ser att den går att integrera med*/
+  border-radius: 50%;
+  color: #191919;
+  text-decoration: none;
+  transition: color 0.5s;
+  text-transform: uppercase;
+  opacity: 90%;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 0 0 10px;
+  -webkit-box-shadow: 0 0 10px;
+  -moz-box-shadow: 0 0 10px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Om width är max 686 */
+@media (max-width: 686px) {
+  .leftfooter,
+  .rightfooter {
+    margin: auto;
+  }
+
+  .leftfooter .border-heading {
+    margin: auto;
+  }
+}
+
+/* Om width är max 768 */
+@media screen and (max-width: 768px) {
+  /*Footer social media*/
+  /*Bootstrap användes för att få tag på sociala media-ikoner*/
+  .btn-social-icon {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 44px;
+    font-size: 1.2em;
+    text-overflow: ellipsis;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border-radius: 21.25rem;
+  }
+
+  .btn-social-icon > :first-child {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    line-height: 56px;
+    font-size: 2.1em;
+    text-align: center;
+  }
+
+  .rightfooter li {
+    display: grid;
+    margin: 20px;
+    float: right;
+  }
+
+  .logo {
+    width: 20em;
+    margin-bottom: 10px;
+    height: auto;
+  }
+
+  .text-column {
+    margin-top: 0px !important;
+    margin-bottom: 50px;
+  }
+
+  .profilepic {
+    width: 200px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .sign {
+    width: 168px;
+    padding-bottom: 19px;
+  }
+
+  .img-text {
+    padding: 15px 15px 150px 15px;
+    }
+}
+
+/* Om width är max 1024*/
+@media screen and (max-width: 1024px) {
+  #myBtn {
+    font-family: "Raleway", sans-serif;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #191919;
+    opacity: 90%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.desktop {
+  display: none;
+}
+
+/* Om width är minimum 1025 */
+@media screen and (min-width: 1025px) {
+  .sign {
+    width: 228px;
+    padding-bottom: 19px;
+    margin-left: 10px;
+  }
+
+  .portfolio-items {
+    /*Sätter ut ett rutnät på 2*2*/
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*Om width är max 1025px*/
+@media screen and (max-width: 1025px) {
+  /*För centrering av rubriken "PORTFOLIO" med text-align och bordern vid lägre upplösning*/
+  #portfolio,
+  .border-heading {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .leftfooter,
+  .two-columns p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  .leftfooter h2 {
+    color: grey;
+    font-size: 30px;
+  }
+
+  #portfolio {
+    color: grey;
+    font-size: 30px;
+  }
+
+  .portfolio-items {
+    padding: 0px;
+  }
+
+  .portfolio-items > #portfolio {
+    padding: 0px;
+    margin-top: 40px;
+  }
+
+  .profilepic {
+    width: 250px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .sign {
+    width: 160px;
+
+    padding-bottom: 18px;
+    margin-left: 10px;
+  }
+}
+
+.subtitle > h1 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*Om width är minimum 1200*/
+@media screen and (min-width: 1200px) {
+  .menu__icon.mobile {
+    display: none;
+  }
+
+  .menu_shown .mobile.menu {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-right: 50px;
+    padding-top: 20px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 36em;
+  }
+
+  .mobile.menu {
+    display: none;
+  }
+}
+
+/*Om width är maximum 1200*/
+@media screen and (max-width: 1200px) {
+  .rightnav a:hover {
+    transform: translateY(0px);
+  }
+  
+  /*Avser hamburgarmenyn som härstammar från ett eget tidigare webbprojekt*/
+  .mobile.menu a {
+    font-weight: bold;
+  }
+
+  .menu_shown .mobile.menu {
+    transform: translateX(0);
+  }
+  .mobile.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 100px;
+    background: #f5f5f5;
+    z-index: 10;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-100%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .mobile.menu a:hover {
+    transform: translateY(-5px);
+  }
+
+  .logo {
+    width: 20em;
+    margin-bottom: 10px;
+    height: auto;
+  }
+}
+
+.menu__icon {
+  height: 32px;
+  width: 43px;
+  margin: 3%;
+  position: absolute;
+  top: 10px;
+  right: 3%;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 20;
+}
+
+/*Mellersta strecket på hamburgarknappen*/
+.menu__icon span {
+  display: block;
+  background: #2c2c2c;
+  width: 100%;
+  height: 4px;
+  margin-top: -2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+/*Den översta och nedersta strecket på hamburgarknappen som animeras vid tryck*/
+.menu__icon:before,
+.menu__icon:after {
+  content: "";
+  display: block;
+  background: #2c2c2c;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  transform-origin: center center;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menu__icon:before {
+  top: 2px;
+  margin-top: -2px;
+}
+
+.menu__icon:after {
+  bottom: 2px;
+  margin-bottom: -2px;
+}
+
+.menu_shown .menu__icon span {
+  background: transparent;
+}
+
+.menu_shown .menu__icon:before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.menu_shown .menu__icon:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.mobile.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+  background: #f5f5f5;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.menu_shown .mobile.menu {
+  transform: translateX(0);
+}
+
+.mobile .menu__item {
+  display: block;
+  line-height: 2;
+  padding: 25px 0;
+}
+/*När width är minimum 1600*/
+@media (min-width: 1600px) {
+  .portfolio-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
